@@ -1,7 +1,7 @@
 # Invoice Ninja backup bash script
+## What it is
 A bash script to backup self-hosted Invoice Ninja data, including the MySQL database and the Webapp, locally then remotely.
 
-## What it is
 Due to the lack of built-in scripts to backup Invoice Ninja, and my need to create an external backup, I've put together a script with some options to backup the Invoice Ninja MySQL database and the web folder locally first, then a second script to copy this backup over SFTP/SSH. Then with a cronjob you can call it as often as you like.
 
 The remote backup script will sync the contents of the local folder to the specified remote folder over SSH/SFTP. Details below on how to create a secure connection between the local and remote machines to enable this.
