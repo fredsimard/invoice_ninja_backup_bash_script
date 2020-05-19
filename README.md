@@ -9,10 +9,10 @@ The remote backup script will sync the contents of the local folder to the speci
 **IMPORTANT** : You need to have a public key from your local machine in the authorized keys of your remote machine. See below on how to accomplish this.
 
 ## Requirements and warnings
-* This is for a system running under Ubuntu 18.0.4 server.
+* This is for a system running under Ubuntu 18.0.4 server, although it should work fine in most recent Ubuntu releases, as well as any variant of Debian. It may require some tweaks.
 * Save the script wherever you wish, just remember the full path for the remote backup script later.
-* Of course, you may need to tweak some things for your setup, and use it at your own risks.
 * You need enough free space to keep the local backups on the disks where you specify to save them, otherwise change the maximum number of days to keep.
+* Of course, use at your own risks.
 
 ## How to install
 1. SSH into your invoice ninja server
