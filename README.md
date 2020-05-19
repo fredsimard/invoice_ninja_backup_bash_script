@@ -28,35 +28,27 @@ The remote backup script will sync the contents of the local folder to the speci
 
 ## Local script values
 
-`DB_BACKUP_PATH` : This is the path where the local backups will be stored
-
-`WEBSITE_BACKUP_PATH` : The path to the web app, usually `/var/www/html/invoiceninja/`
-
-`WEBSITE_ARCHIVE_FILE` : The name of the archive for the web app. There is the `TODAY` variable included to make the name unique.
-
-`MYSQL_HOST` : Usually localhost
-
-`MYSQL_PORT` : Usually 3306
-
-`MYSQL_USER` : Any SQL user that has sufficient privileges
-
-`MYSQL_PASSWORD` : The SQL password that goes with the user specified above.
-
-`DATABASE_NAME` : Whatever name you gave to the SQL database for invoice ninja.
-
-`BACKUP_RETAIN_DAYS` : Number of days to keep local backup copies, an integer.
+VALUE | What it is
+------------ | -------------
+`DB_BACKUP_PATH` | This is the path where the local backups will be stored
+`WEBSITE_BACKUP_PATH` | The path to the web app, usually `/var/www/html/invoiceninja/`
+`WEBSITE_ARCHIVE_FILE` | The name of the archive for the web app. There is the `TODAY` variable included to make the name unique.
+`MYSQL_HOST` | Usually localhost, but any valid IP address or FQDN will do.
+`MYSQL_PORT` | Usually 3306
+`MYSQL_USER` | Any SQL user that has sufficient privileges
+`MYSQL_PASSWORD` | The SQL password that goes with the user specified above.
+`DATABASE_NAME` | Whatever name you gave to the SQL database for invoice ninja.
+`BACKUP_RETAIN_DAYS` | Number of days to keep local backup copies, an integer.
 
 ## Remote script values
 
-`___REMOTE_HOST_PORT_NUMBER__` : If you're not using port 22 for the remote SSH connection, then put it here. Otherwise, either put 22 or remove the -p entirely.
-
-`__FULL_PATH_TO_LOCAL_BACKUPS_FOLDER__` : The path specified in the local backup script.
-
-`__USERNAME__` : The username for the SSH connection
-
-`__IPADDRESS__` : The IP or FQDN (www.example.com) of the remote host.
-
-`__FULL_PATH_TO_REMOTE_BACKUPS_FOLDER__` : The path where you wish to save the local backups to.
+VALUE | What it is
+------------ | -------------
+`___REMOTE_HOST_PORT_NUMBER__` | If you're not using port 22 for the remote SSH connection, then put it here. Otherwise, either put 22 or remove the -p entirely.
+`__FULL_PATH_TO_LOCAL_BACKUPS_FOLDER__` | The path specified in the local backup script.
+`__USERNAME__` | The username for the SSH connection
+`__IPADDRESS__` | The IP or FQDN (www.example.com) of the remote host.
+`__FULL_PATH_TO_REMOTE_BACKUPS_FOLDER__` | The path where you wish to save the local backups to.
 
 ## How to setup a cron job
 
