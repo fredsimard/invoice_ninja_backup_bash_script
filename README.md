@@ -71,7 +71,7 @@ This says to start the local backups at 2 AM every day, then start the remote ba
 
 ## How to establish a secure connection between your server and the remote backup machine over SSH/SFTP
 
-On the origin server, generate public SSH keys, do not specify a password when asked (hit enter)
+On the origin server, generate public SSH keys, do not specify a password if asked (hit enter):
 
 `ssh-keygen -f ~/.ssh/id_rsa -q -P ""`
 
