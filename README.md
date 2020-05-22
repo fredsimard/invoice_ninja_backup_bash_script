@@ -80,7 +80,7 @@ On your remote machine, log in with SSH, and do this command:
 And paste the contents at the end, on a new line. Save and exit nano (Ctrl-O, Ctrl-X).
 
 If the file doesn't exist, here's how to create it:
-```
+```bash
 mkdir ~/.ssh
 chmod 0700 ~/.ssh
 sudo touch ~/.ssh/authorized_keys
