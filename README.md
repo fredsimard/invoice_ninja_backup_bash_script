@@ -1,4 +1,7 @@
 # Invoice Ninja backup bash script
+
+![License](https://img.shields.io/badge/license-GPL-blue.svg) ![Version](https://img.shields.io/badge/version-v1.0-green.svg)
+
 ## What it is
 A bash script to backup all of the self-hosted Invoice Ninja data, which includes the MySQL database and the Web app, locally then remotely.
 
