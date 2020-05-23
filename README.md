@@ -47,7 +47,7 @@ VALUE | What it is
 
 VALUE | What it is
 ------------ | -------------
-`___REMOTE_HOST_PORT_NUMBER__` | If you're not using port 22 for the remote SSH connection, then put it here. Otherwise, either put 22 or remove the -p entirely.
+`__REMOTE_HOST_PORT_NUMBER__` | If you're not using port 22 for the remote SSH connection, then put it here. Otherwise, either put 22 or remove the -p entirely.
 `__FULL_PATH_TO_LOCAL_BACKUPS_FOLDER__` | The path specified in the local backup script.
 `__USERNAME__` | The username for the SSH connection
 `__IPADDRESS__` | The IP or FQDN (www.example.com) of the remote host.
