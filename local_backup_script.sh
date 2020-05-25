@@ -12,12 +12,39 @@ HOSTNAME=$(hostname -s)  ## Or put whatever name you want in quotes instead of $
 DB_BACKUP_PATH='/root/Backups'  ## This is the path where the local backups will be stored
 WEBSITE_BACKUP_PATH='/var/www/html/invoiceninja/'  ## The path to the web app
 WEBSITE_ARCHIVE_FILE="invoice-ninja-website-$TODAY.tar.gz"  ## The name of the archive for the web app
-MYSQL_HOST='localhost'
 MYSQL_PORT='3306'
-MYSQL_USER='root' ## or whatever user that has the sufficient privileges
-MYSQL_PASSWORD='your_user_password'
-DATABASE_NAME='invoiceninja' ## or whatever name you gave to the DB
 BACKUP_RETAIN_DAYS=30   ## Number of days to keep local backup copy
+
+#################################################################
+############# Parse required values from .env file  #############
+
+DB_TYPE='DB_TYPE'
+DB_HOST='DB_HOST'
+DB_DATABASE='DB_DATABASE'
+DB_USERNAME='DB_USERNAME'
+DB_PASSWORD='DB_PASSWORD'
+
+while IFS="=" read -r key value; do
+    if [ $key = $DB_HOST ]
+    then
+        MYSQL_HOST=$value
+    fi
+
+    if [ $key = $DB_DATABASE ]
+    then
+        DATABASE_NAME=$value
+    fi
+
+    if [ $key = $DB_USERNAME ]
+    then
+        MYSQL_USER=$value
+    fi
+
+    if [ $key = $DB_PASSWORD ]
+    then
+        DB_PASSWORD=$value
+    fi
+done < $WEBSITE_BACKUP_PATH.env
 
 #################################################################
 
