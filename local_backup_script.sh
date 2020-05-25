@@ -42,7 +42,7 @@ while IFS="=" read -r key value; do
 
     if [ $key = $DB_PASSWORD ]
     then
-        DB_PASSWORD=$value
+        MYSQL_PASSWORD=$value
     fi
 done < $WEBSITE_BACKUP_PATH.env
 
