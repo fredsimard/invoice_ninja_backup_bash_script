@@ -17,6 +17,7 @@ BACKUP_RETAIN_DAYS=30   ## Number of days to keep local backup copy
 
 #################################################################
 ############# Parse required values from .env file  #############
+# If this is a clean install of v5 of Invoice Ninja you maay need to set below values to DB_TYPE1, DB_HOST1, DB_DATABASE1, DB_USERNAME1, and DB_PASSWORD1
 
 DB_TYPE='DB_TYPE'
 DB_HOST='DB_HOST'
